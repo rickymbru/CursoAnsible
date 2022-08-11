@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-inventory.json": "file:///home/infra/ansible/.history/labAnsible/inventory2_20220807154322.yml",
+        "https://raw.githubusercontent.com/andig/evcc/master/schema.json": "file:///home/infra/ansible/inventory.yml"
+    }
+}
