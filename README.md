@@ -4,3 +4,11 @@ Repositório com os arquivos utilizados no curso de Ansible.
 O Conteúdo deste repositório foi utilizado para a ministração do curso de Ansible. 
 O curso completo pode ser acessado no seguinte link: https://www.youtube.com/watch?v=Os0Uo5VXxNU&list=PLORF-y_edVoDQnky9u2OgyrfirE1dhutX
 
+# ad hoc
+ansible ol -m yum -a "name=curl state=present" -became
+
+# Facts
+ansible all -m setup
+ansible all -m setup -a "filter=ansible_distribution"
+ansible all -m setup -a "filter=ansible_hostname"
+ansible all -m setup -a "filter=ansible_memtotal_mb"

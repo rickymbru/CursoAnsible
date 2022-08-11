@@ -6,9 +6,6 @@ all:
     ol:
       hosts:
         apex-dev:
-    web:
-      hosts:
-        web[1:2]:
 
 
 
