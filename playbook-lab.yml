@@ -1,10 +1,11 @@
 ---
-- hosts: ol
+- hosts: all
   become: yes
-
   tasks:
   - name: "INSTALAR PACOTE CURL OL"
     yum:
       update_cache: yes
       name: "wget"
       state: present
+    when: (ansible_facts['distribution'] == "OracleLinux")
+    
