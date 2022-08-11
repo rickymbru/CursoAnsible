@@ -3,9 +3,11 @@ all:
     debian:
       hosts:
         teste-debian:
+          hostname: teste-debian
     ol:
       hosts:
         apex-dev:
+         hostname: apex-dev
 
 
 

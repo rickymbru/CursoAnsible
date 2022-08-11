@@ -1,11 +1,17 @@
 ---
 - hosts: all
   become: yes
+
+  vars:
+  
+
   tasks:
-  - name: "INSTALAR PACOTE CURL OL"
-    yum:
+  - name: "INSTALAR PACOTE CURL DEBIAN"
+    apt:
       update_cache: yes
       name: "wget"
       state: present
-    when: (ansible_facts['distribution'] == "OracleLinux")
-    
+    when: (ansible_facts['distribution'] == "Debian")
+  - name: "DEFINIR HOSTNAME"
+    hostname:
+      name: "{{ hostname }}"    
