@@ -3,7 +3,7 @@
   become: yes
 
   vars:
-  
+    default_dir: /opt/custom
 
   tasks:
   - name: "INSTALAR PACOTE CURL DEBIAN"
@@ -14,4 +14,20 @@
     when: (ansible_facts['distribution'] == "Debian")
   - name: "DEFINIR HOSTNAME"
     hostname:
-      name: "{{ hostname }}"    
+      name: "{{ hostname }}"
+
+  - name: "CRIAR DIRETORIO CUSTOM"
+    file:
+      path: "{{ default_dir }}"
+      state: directory
+      owner: infra
+      group: infra      
+  - name: "CRIAR ARQUIVO TESTE"
+    file:
+      path: "{{ default_dir }}/teste.py"
+      state: touch
+      owner: infra
+      group: infra
+      mode: 0755
+      modification_time: preserve
+      access_time: preserve
