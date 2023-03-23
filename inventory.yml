@@ -2,12 +2,12 @@ all:
   children:
     debian:
       hosts:
-        teste-debian.cedae.corp:
-          hostname: teste-debian
+        teste-ubuntu.cedae.corp:
+          hostname: teste-ubuntu
     ol:
       hosts:
-        apex-dev.cedae.corp:
-         hostname: apex-dev
+        teste-ol7.cedae.corp:
+         hostname: teste-ol7
 
 
 
